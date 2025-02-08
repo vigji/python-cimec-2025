@@ -24,7 +24,7 @@ This course will start covering **the basics of Python usage** and build up from
 
 **Framework and requirements**: You will be following the course on your own laptop. The first two modules will be teaching using **Google Colab**, with **no installation required** (you will only need a browser and a working internet connection). In the second part we will move to **Jupyter Notebooks**, to understand how to **set up an real-world Python environment** that can be used in the every day research work. There won't be system requirements, we should be able to set it up on Windows, MacOS, and Linux (you will have instructions and assistance for doing that!).
 
-**Assignments**: At the end of each of the first three modules there will be **a minimal recap assigment**, and a **time slot to ask questions** on the lectures and on the assignment. 
+**Assignments**: After every lecture, there will be some homeworks to complete recapitulating the concepts from the lecture. You are encouraged to complete week by week; their completion will be compulsory, with the deadline at the end of each module (so don't worry if you skip one week). 
 
 **Material**: The material will consist in jupyter notebooks and python scripts with the lecture content and exercises and it will be made available before the lectures using GitHub. 
 
