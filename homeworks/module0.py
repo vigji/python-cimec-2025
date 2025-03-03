@@ -1,8 +1,8 @@
-###########
-# Lecture 0
-###########
+#############
+# Lecture 0.0
+#############
 
-# 0.0
+# 0.0.0
 # Create a variable that checks if a year is a leap year
 # A year is a leap year if it's:
 # - divisible by 4 AND
@@ -19,7 +19,7 @@ is_leap_year = ...
 
 
 
-# 0.1
+# 0.0.1
 # Create a temperature converter that:
 # 1. Takes a temperature in Fahrenheit (use float)
 # 2. Converts it to Celsius (google the formula)
@@ -42,6 +42,42 @@ is_boiling = ...
 is_liquid = ...   # ensure that only one of these is true for each of the possible temperatures!
 
 
+#############
+# Lecture 0.1
+#############
+
+# 0.1.0
+# Create a variable that stores the string "Hello, world!"
+# Assign to a new variable the uppercase version of the string
+# Assign to new variables the even and odd characters of the string
+# Concatenate the even and odd characters together, separated by a space
+# Print the result
+
+stupid_text = "Hello, world!"
+
+uppercase_string = ...
+even_characters = ...
+odd_characters = ...
+concatenated_string = ...
+
+print(concatenated_string)
+
+# 0.1.1
+# Choose what would be the best data structure to store the following data, and why; there can be multiple good answers
+# 1. Names of all the students in a class, with the option to add or remove students
+# 2. Address for every student in a list
+# 3. x, y pair of coordinates for a point we need to plot
+# 4. The group of *unique* IPs addresses accessing a server
+
+# 0.1.2
+# From the list below, pop the last element, and add it to the dictionary defined below, 
+# under the key "new_element". Then, add the rest of the list to the dictionary,
+# under the key "rest_of_the_list".
+list_of_elements = [1, 2, 3, 4, 5]
+
+dictionary_of_elements = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
+
+# Then index the first element of the "rest_of_the_list" list entry in the dictionary
 
 
 
