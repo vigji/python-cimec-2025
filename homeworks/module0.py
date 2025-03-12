@@ -81,6 +81,51 @@ dictionary_of_elements = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
 
 
 # 0.2.0
+# Text Analysis with Sets and Dictionaries
+# In this exercise, you'll analyze two text samples to find patterns and differences.
+
+text_sample1 = """
+Python is a high-level, general-purpose programming language. Its design philosophy 
+emphasizes code readability with the use of significant indentation. Python is dynamically 
+typed and garbage-collected. It supports multiple programming paradigms, including structured, 
+object-oriented, and functional programming.
+"""
+
+text_sample2 = """
+Python is widely used in artificial intelligence, data analysis, scientific computing, 
+and web development. Its syntax allows programmers to express concepts in fewer lines 
+of code than would be possible in languages such as C++ or Java. The language provides 
+constructs intended to enable clear programs on both small and large scales.
+"""
+
+# 1. Clean the texts by converting it to lowercase 
+# (if you want you can also remove punctuation using string method replace())
+
+cleaned_text1 = ...
+cleaned_text2 = ...
+
+# 2. Create sets of unique words for each text 
+unique_words1 = ...
+unique_words2 = ...
+
+# 3. Find words that appear in both texts
+common_words = ...
+
+# 4. Find words that are unique to each text
+only_in_text1 = ...
+only_in_text2 = ...
+
+# 5. Create a dictionary that maps each word to its frequency in both texts combined
+# The dictionary should have the format: {"word": count}
+# Think about how you could do the counting using a loop and a conditional statement
+word_frequency = {}
+
+# 6. Find the most common word across texts
+# Hint: you can either find the way to sort the dictionary, 
+# or use a loop and a conditional statement to find the word with the highest count:
+top_five_words = ...
+
+
 
 
 
