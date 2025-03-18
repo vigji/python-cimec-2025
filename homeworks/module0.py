@@ -132,7 +132,7 @@ top_five_words = ...
 # (make sure you do not modify the original list!)
 
 # Then, write a for loop to call it over numbers from 1 to 100 in lists of 10
-# (first time between 1 and 10, then between 11 and 20, etc), and print "bingo" if their sum is a multiple of 3
+# (first time between 1 and 10, then between 11 and 20, etc), and print "bingo" if the sum of the result list is a multiple of 3
 
 
 # 0.3.1
