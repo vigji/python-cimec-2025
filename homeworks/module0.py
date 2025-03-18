@@ -127,6 +127,19 @@ top_five_words = ...
 
 
 
+# 0.3.0
+# Create a function square_list that takes a list of numbers and returns a list of their squares
+# (make sure you do not modify the original list!)
+
+# Then, write a for loop to call it over numbers from 1 to 100 in lists of 10
+# (first time between 1 and 10, then between 11 and 20, etc), and print "bingo" if their sum is a multiple of 3
 
 
+# 0.3.1
+# Encapsulate the Netflix session generator from the lecture
+# inside a function that takes as arguments 
+# all the parameters (probability, cliffhanger probability, etc.)
+# and returns the number of watched episodes in a single session simulation.
 
+# Define it in a way that the cliffhanger effect can be inactivated in
+# the simulation if the cliffhanger_prob argument is set to None:
