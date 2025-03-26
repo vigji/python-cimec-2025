@@ -143,3 +143,48 @@ top_five_words = ...
 
 # Define it in a way that the cliffhanger effect can be inactivated in
 # the simulation if the cliffhanger_prob argument is set to None:
+
+
+# 0.4.0
+# You get the Counter class definition below. To understand how to use it, you can either:
+# - peek at the code, or
+# - use help(), dir(), ?Counter (remember the ? help query in jupyter notebooks), and other introspection tools
+
+class Counter:
+    """A simple counter class that can increment and reset.
+    
+    Initialize with Counter(start=0) to begin counting from a specific number.
+    """
+    def __init__(self, start=0, max_value=None):
+        self._value = start
+        self._increment_count = 0
+        self._max_value = max_value
+    
+    def increment(self, step=1):
+        """Increases counter by step (default 1) and returns new value"""
+        self._value += step
+        self._increment_count += 1
+        if self._max_value is not None and self._value > self._max_value:
+            raise ValueError("Counter value exceeds maximum value")
+        return self._value
+    
+    def reset(self):
+        """Resets counter to 0 and returns new value"""
+        self._value = 0
+        return self._value
+    
+    def __str__(self):
+        return f"Counter(value={self._value})"
+
+
+# 1. Create a Counter instance
+
+# 2. Use a while loop to increment the counter by 2 until it exceeds 20 using the increment method 
+# (you can check out the method definition, the docstring or ?Counter.increment to see the arguments)
+
+# 3.Create a new Counter instance with a start value of 5 and a max value of 10
+
+# 4. Increment the new counter by steps of 1 for 20 times using a for loop and the increment method. Can you do it?
+
+# 5. Fix the above code by adding an if clause that resets the counter every 5 increments using the reset method.
+
