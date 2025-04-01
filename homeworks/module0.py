@@ -199,8 +199,10 @@ class Counter:
 # 2. Expose the r, g, b values as simple properties that just return the private attributes
 # 3. Create a method called get_rgb_tuple that returns the r, g, b values as a tuple (r, g, b are stored in the private attributes _r, _g, _b)
 # (optional: instead of a method, do this with a property named rgb_tuple)
-# 4. Add a method called mix_with() that takes as input another RGBColor as argument,
+# 4. Add a method called mix_with() that takes as input another RGBColor object as argument,
 #    and returns a new RGBColor with the average of the two colors' values over each R, G, and B channel (rounded to integers)
+
+# Make sure that you also write code to check that each of the above methods are working as expected!
 
 # This 4th step is a bit tricky, so here's increasingly explicit hints in case you are stuck!
 # 1. You can access the r, g, b values of the other input color using its attributes/properties
