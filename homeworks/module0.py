@@ -188,3 +188,21 @@ class Counter:
 
 # 5. Fix the above code by adding an if clause that resets the counter every 5 increments using the reset method.
 
+
+# 0.5.0
+
+# Create a class called RGBColor that can be used to represent colors in the RGB color space. 
+# RGB colors are defined by three values for three different channels: red (R), green (G), and blue (B), 
+# which can be integers between 0 and 255.
+
+# 1. Initialize it with r, g, b values. Check that they are integers between 0-255, and set them to private attributes _r, _g, _b
+# 2. Expose the r, g, b values as simple properties that just return the private attributes
+# 3. Create a method called get_rgb_tuple that returns the r, g, b values as a tuple (r, g, b are stored in the private attributes _r, _g, _b)
+# (optional: instead of a method, do this with a property named rgb_tuple)
+# 4. Add a method called mix_with() that takes as input another RGBColor as argument,
+#    and returns a new RGBColor with the average of the two colors' values over each R, G, and B channel (rounded to integers)
+
+# This 4th step is a bit tricky, so here's increasingly explicit hints in case you are stuck!
+# 1. You can access the r, g, b values of the other input color using its attributes/properties
+# 2. you can loop over r, g, b of other_color and self to compute averages one channel at a time
+# 3. You can use the three new (rounded with int()) averages to create a new RGBColor instance and return it
