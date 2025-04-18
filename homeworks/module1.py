@@ -116,12 +116,47 @@ def fetch_image():
 
 # Use broadcasing  to compute delta_f_f from the stack, without using for loops!
 
-# 5. # Let's now look at some signals over time. Locate the region with more activity, or a neuron,
-# and plot the average activity over time for that region! If you don't know where to look for,
-# the area covered by vertical_lims = [25, 45] and horizontal_lims = [0, 20] has nice signal!
-
 # 6. Let's say we want to make a boolean mask for the neurons. One way of creating such mask
 # can be to use a threshold to find the pixels whose maximum projection is above a certain value.
 # Try to compute such mask, playing with the threshold value until you find a number that 
 # works to isolate the neurons (they will appear as some 15-20 blobs in the image).
 # You can plot the boolean mask using matplotlib to see how it looks like.
+
+wlims = [0, 20]
+
+
+
+
+folder = Path("/Users/vigji/Downloads/Animal 1_Day 7")
+
+# list all files in the folder
+files = sorted(list(folder.glob("*.tif")))
+
+# load first 350 tiffs into a 3D array
+imgs = np.stack([np.array(Image.open(f)) for f in files[:250]])
+imgs = imgs[:, 50:-50, 50:-50]
+mean_proj = np.mean(imgs, axis=0)
+# %%
+# save the array to a file
+np.save("/Users/vigji/code/python-cimec-2025/practicals/data/calcium_data.npy",  imgs)
+# %%
+plt.imshow(mean_proj)
+# plt.plot(np.mean(imgs[], axis=(1,2)))
+
+
+
+
+
+
+
+plt.figure()
+#plt.imshow(mean_proj[hlims[0]:hlims[1], wlims[0]:wlims[1]])
+plt.plot(np.mean(imgs[:, hlims[0]:hlims[1], wlims[0]:wlims[1]], axis=(1,2)))
+
+# %%
+dff = (imgs - np.mean(imgs, axis=0)) / np.mean(imgs, axis=0)
+
+# %%
+plt.figure()
+plt.plot(np.mean(dff[:, hlims[0]:hlims[1], wlims[0]:wlims[1]], axis=(1,2)))
+# %%
