@@ -119,5 +119,45 @@ def fetch_image():
 # 6. Let's say we want to make a boolean mask for the neurons. One way of creating such mask
 # can be to use a threshold to find the pixels whose maximum projection is above a certain value.
 # Try to compute such mask, playing with the threshold value until you find a number that 
-# works to isolate the neurons (they will appear as some 15-20 blobs in the image).
+# works to isolate the neurons (they will appear as some 10-20 blobs in the image).
 # You can plot the boolean mask using matplotlib to see how it looks like.
+# %%
+from matplotlib import pyplot as plt
+data = fetch_image()
+# %%
+max_mask = data.mean(axis=0)
+mask = max_mask > 1000
+plt.figure()
+plt.imshow(mask)
+# %%
+import numpy as np
+neurons = np.nonzero(mask)
+print(neurons[0].shape)
+neurons_data = data[neurons] #, neurons[1], :]
+print(neurons_data.shape)
+
+plt.figure()
+plt.plot(neurons_data.mean(axis=0))
+# %%
+
+########################
+# Lecture 1.2
+########################
+
+# 1.2.0
+# Let's say we want to look at the signal for all neurons we have located. 
+# To find neurons, we can start from the boolean mask we have computed in the previous exercise.
+# Make sure you have selected a threshold that separates (most) blobs from each other, meaning 
+# that there is complete separation (no touching points) between the blobs for the neurons.
+
+# After computing the mask, we can find the indices of the pixels belonging to the neurons 
+# by using the `np.argwhere` or the `np.nonzero` function. Do it!
+
+# 1.2.1
+# After selecting the neurons pixels (you should get an array of shape (N, 2) where N is the number of neurons pixels),
+# compute the mean signal across all neurons pixels over time, and plot it.
+# You will see a (noisy) signal with some actibity peaks.
+
+# 1.2.2
+# Set a threshold on the mean of the neurons, and use argwhere to find the indices of the peaks!
+# You can try to find a way to visualize the indexes that you find on the activity plot to check if they make sense.
