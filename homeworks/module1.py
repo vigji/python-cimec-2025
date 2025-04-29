@@ -122,22 +122,6 @@ def fetch_image():
 # works to isolate the neurons (they will appear as some 10-20 blobs in the image).
 # You can plot the boolean mask using matplotlib to see how it looks like.
 # %%
-from matplotlib import pyplot as plt
-data = fetch_image()
-# %%
-max_mask = data.mean(axis=0)
-mask = max_mask > 1000
-plt.figure()
-plt.imshow(mask)
-# %%
-import numpy as np
-neurons = np.nonzero(mask)
-print(neurons[0].shape)
-neurons_data = data[neurons] #, neurons[1], :]
-print(neurons_data.shape)
-
-plt.figure()
-plt.plot(neurons_data.mean(axis=0))
 # %%
 
 ########################
