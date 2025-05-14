@@ -18,7 +18,6 @@ year_to_test = year_0  # change this to test other years
 is_leap_year = ...
 
 
-
 # 0.0.1
 # Create a temperature converter that:
 # 1. Takes a temperature in Fahrenheit (use float)
@@ -29,9 +28,9 @@ is_leap_year = ...
 #    - boil (100°C or above)
 #    - or be liquid (between 0-100°C)
 # Test with these temperatures:
-temp_0 = 32.0    
-temp_1 = 212.0   
-temp_2 = 98.6    
+temp_0 = 32.0
+temp_1 = 212.0
+temp_2 = 98.6
 temp_3 = -40.0
 
 temp_to_test = temp_0  # change this assigment to test other temperatures
@@ -39,7 +38,9 @@ temp_to_test = temp_0  # change this assigment to test other temperatures
 temp_in_celsius = ...  # make sure this is an int!
 is_frozen = ...
 is_boiling = ...
-is_liquid = ...   # ensure that only one of these is true for each of the possible temperatures!
+is_liquid = (
+    ...
+)  # ensure that only one of these is true for each of the possible temperatures!
 
 
 #############
@@ -70,7 +71,7 @@ print(concatenated_string)
 # 4. The group of *unique* IPs addresses accessing a server
 
 # 0.1.2
-# From the list below, pop the last element, and add it to the dictionary defined below, 
+# From the list below, pop the last element, and add it to the dictionary defined below,
 # under the key "new_element". Then, add the rest of the list to the dictionary,
 # under the key "rest_of_the_list".
 list_of_elements = [1, 2, 3, 4, 5]
@@ -98,13 +99,13 @@ of code than would be possible in languages such as C++ or Java. The language pr
 constructs intended to enable clear programs on both small and large scales.
 """
 
-# 1. Clean the texts by converting it to lowercase 
+# 1. Clean the texts by converting it to lowercase
 # (if you want you can also remove punctuation using string method replace())
 
 cleaned_text1 = ...
 cleaned_text2 = ...
 
-# 2. Create sets of unique words for each text 
+# 2. Create sets of unique words for each text
 unique_words1 = ...
 unique_words2 = ...
 
@@ -121,10 +122,9 @@ only_in_text2 = ...
 word_frequency = {}
 
 # 6. Find the most common word across texts
-# Hint: you can either find the way to sort the dictionary, 
+# Hint: you can either find the way to sort the dictionary,
 # or use a loop and a conditional statement to find the word with the highest count:
 top_five_words = ...
-
 
 
 # 0.3.0
@@ -137,7 +137,7 @@ top_five_words = ...
 
 # 0.3.1
 # Encapsulate the Netflix session generator from the lecture
-# inside a function that takes as arguments 
+# inside a function that takes as arguments
 # all the parameters (probability, cliffhanger probability, etc.)
 # and returns the number of watched episodes in a single session simulation.
 
@@ -150,16 +150,18 @@ top_five_words = ...
 # - peek at the code, or
 # - use help(), dir(), ?Counter (remember the ? help query in jupyter notebooks), and other introspection tools
 
+
 class Counter:
     """A simple counter class that can increment and reset.
-    
+
     Initialize with Counter(start=0) to begin counting from a specific number.
     """
+
     def __init__(self, start=0, max_value=None):
         self._value = start
         self._increment_count = 0
         self._max_value = max_value
-    
+
     def increment(self, step=1):
         """Increases counter by step (default 1) and returns new value"""
         self._value += step
@@ -167,19 +169,19 @@ class Counter:
         if self._max_value is not None and self._value > self._max_value:
             raise ValueError("Counter value exceeds maximum value")
         return self._value
-    
+
     def reset(self):
         """Resets counter to 0 and returns new value"""
         self._value = 0
         return self._value
-    
+
     def __str__(self):
         return f"Counter(value={self._value})"
 
 
 # 1. Create a Counter instance
 
-# 2. Use a while loop to increment the counter by 2 until it exceeds 20 using the increment method 
+# 2. Use a while loop to increment the counter by 2 until it exceeds 20 using the increment method
 # (you can check out the method definition, the docstring or ?Counter.increment to see the arguments)
 
 # 3.Create a new Counter instance with a start value of 5 and a max value of 10
@@ -191,8 +193,8 @@ class Counter:
 
 # 0.5.0
 
-# Create a class called RGBColor that can be used to represent colors in the RGB color space. 
-# RGB colors are defined by three values for three different channels: red (R), green (G), and blue (B), 
+# Create a class called RGBColor that can be used to represent colors in the RGB color space.
+# RGB colors are defined by three values for three different channels: red (R), green (G), and blue (B),
 # which can be integers between 0 and 255.
 
 # 1. Initialize it with r, g, b values. Check that they are integers between 0-255, and set them to private attributes _r, _g, _b
