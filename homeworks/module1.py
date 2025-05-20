@@ -148,8 +148,10 @@ def fetch_image():
 # Set a threshold on the mean of the neurons, and use argwhere to find the indices of the peaks!
 # You can try to find a way to visualize the indexes that you find on the activity plot to check if they make sense.
 
+########################
+# Lecture 1.3-4
+########################
 
-# 1.3-4
 # Here, we will download the information about about thousands volumns available on Amazon. 
 # Just a tiny fraction of Babel's books, but way more organized!
 
@@ -178,3 +180,10 @@ books_df_url = "https://github.com/vigji/python-cimec-2024/raw/main/assignments/
 
 # (Optional): from the users DataFrame generate a list of all the countries present in the dataset. 
 # Then, find the highest rated book in each one of those countries.
+
+########################
+# Lecture 1.5
+########################
+
+# From the data above, make a multi-panel figure; in each panel, plot the histogram of the ages of the users for a country (either all countries or the first six for number of users). Make sure the plot is fully readable, with labelled axes and titles specofying the country for every plot
+
