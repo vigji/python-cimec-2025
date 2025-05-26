@@ -30,7 +30,7 @@ Ideally, after a brief description, in the `README.md` you should give some inst
 To give an idea, reasonable projects could be like:
  - Preliminary analysis of a dataset (with data loading, aggregation, plots...); either original data or from the web
  - Implementing a new experiment / preparing the material to run an experiment (eg images for a stimulus)
- - Refactoring some old code you wrote before (conceptual and not only cosmetic! Avoiding duplicated code, reusability, etc.)
+ - Refactoring some old code you wrote before (conceptual and not only cosmetic! Avoiding duplicated code, reusability, etc.). If you go this way, it would be great to share code before and after refactoring!
  
 Random examples from past years course:
  - EEG data analysis pipeline[link](https://github.com/InesSeverino2/python-cimec-ines-severino)
